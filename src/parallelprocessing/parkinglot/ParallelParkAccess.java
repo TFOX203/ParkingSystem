@@ -13,10 +13,11 @@ public class ParallelParkAccess {
 		Empresa.registrarAparcamiento(parking1);
 		Empresa.registrarAparcamiento(parking2);
 		
-		Thread t1 = new EntraceJob(parking1);
-		Thread t2 = new EntraceJob(parking1);
+		Thread t1 = new EntraceJob(parking1,"justo");
+		Thread t2 = new EntraceJob(parking1,"carlos");
 		
 		t1.start();
+		t2.start();
 		
 		
 	}
