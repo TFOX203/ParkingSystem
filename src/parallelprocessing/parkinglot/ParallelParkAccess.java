@@ -1,8 +1,5 @@
 package parallelprocessing.parkinglot;
 
-import java.util.Iterator;
-
-import javax.sql.rowset.Joinable;
 
 import com.parking.modelo.Aparcamiento;
 import com.parking.modelo.Empresa;
@@ -17,8 +14,11 @@ public class ParallelParkAccess {
 		Empresa.registrarAparcamiento(parking1);
 		Empresa.registrarAparcamiento(parking2);
 		
-		int threads = 40;
-		for (int i = 0; i < threads; i++) {
+		int numOfThread = 40;
+		Thread[] threads = new Thread[numOfThread];
+		for (int i = 0; i < numOfThread; i++) {
+			Thread t = new EntraceJob(parking1, "justo" + i);
+			threads[i] = t;
 			
 		}
 		Thread t1 = new EntraceJob(parking1,"justo");
