@@ -13,7 +13,7 @@ public class Aparcamiento {
         this.cochesAparcados = 0;
     }
 
-    public synchronized boolean entrarCoche() {
+    public synchronized boolean entrarCoche() { 
         if (cochesAparcados < aforoMaximo) {
             cochesAparcados++;
             System.out.println(Thread.currentThread().getName()
