@@ -1,8 +1,11 @@
 
 package Actividades;
 
+import java.security.PublicKey;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicBoolean;
+
+import jdk.dynalink.beans.StaticClass;
 
 public class ParallelSearching1 {
 
@@ -70,6 +73,7 @@ public class ParallelSearching1 {
 
 				return;
 			}
+			
 		}
 	}
 }
